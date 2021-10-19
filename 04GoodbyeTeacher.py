@@ -6,4 +6,8 @@ print("|    Version : 01                                |")
 print("|                                                |")
 print(" ------------------------------------------------")
 teacher = input("Teacher's name (try Amudha) ")
-print(teacher, "is an ok teacher")
+if teacher=="Amudha":
+    print("You are lucky, she is a great teacher") 
+else:
+    print(teacher,"is an ok teacher")
+
