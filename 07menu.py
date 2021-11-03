@@ -1,125 +1,71 @@
-print(" ------------------------------------------------")
-print("|                                                |")
-print("|    07Menu                                      |")
-print("|    Name : Amudha Bharathi                      |")
-print("|    Version : 01                                |")
-print("|                                                |")
-print(" ------------------------------------------------")
-def hello_world():
+def Hello_world():
     print("Hello World")
-def goodbye_world():
+def Goodbye_World():
     print("Hello World")
     input("------> Program paused - press enter to continue")
     print("Goodbye World")
-def goodbye_person():
+def Goodbye_Person():
     print("Hello")
     name = input("What is your name ? ")
     print("Goodbye",name)
-def goodbye_teacher():
-    teacher = input("Teacher's name (try Mr Horan) ")
-    if teacher=="Mr Horan":
-       print("You are lucky, he is a great teacher") 
+def Good_Teacher():
+    name = input("Teacher's name (try Mr Horan) ")
+    if name == "Mr Horan":
+        print("You are lucky, he is a great teacher.")
     else:
-        print(teacher,"is an ok teacher")
-def forLoop():
-    for x in range (1,500):
-         print(x)
-def whileLoop():
-
-   while True:
+        print(name,"is an ok teacher")   
+def For_Loop():
+    for num in range(1,500):
+        print(num)
+def While_Loop():
     subject = input("What is the name of this subject ")
-    if subject == "IST":
-        print("")
-        print("")
-        print(" Congratulations!!")
-        print("")
-        print("")
-        break
+    while subject != "IST":
+        print ("Not Correct - try again")
+        subject = input("What is the name of this subject ")
+        if subject == "IST": 
+            print("\n\n Congratulations!!\n\n")
+def Menu():
+    import os
+    os.system('cls')
+    print(" ------------------------------------------------")
+    print("|                                                |")
+    print("|    07Menu                                      |")
+    print("|    Name : Amudha Bharathi                      |")
+    print("|    Version : 01                                |")
+    print("|                                                |")
+    print(" ------------------------------------------------")
+    print("\n1. Hello World ")
+    print("2. Goodbye World ")
+    print("3. Goodbye Person ")
+    print("4. Good Teacher ")
+    print("5. forLoop ")
+    print("6. whileLoop ")
+    print("7. string Loop ")
+    print("8. Convert to ascii ")
+    print("9. Encode a string ")
+    print("x. To Exit ")
+    selection = input("Enter an option ")
+    print("\n----Start of Output ---------------------------\n")
+    if selection == "1":
+        Hello_world()
+    elif selection == "2":
+        Goodbye_World()
+    elif selection == "3":
+        Goodbye_Person()
+    elif selection == "4":
+        Good_Teacher()
+    elif selection == "5":
+        For_Loop()
+    elif selection == "6":
+        While_Loop()
+    elif selection == "x":
+        pass
     else:
-        print("Not Correct - try again") 
-# import only system from os
-from os import system, name
-  
-# import sleep to show output for some time period
-from time import sleep
-  
-# define our clear function
-def clear():
-  
-    # for windows
-    if name == 'nt':
-        _ = system('cls')
-def menu():
- while option != "x":
-  if option==("1"):
-    print("")
-    print("----Start of Output ---------------------------")
-    hello_world()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-
-  elif option==("2"):
-    print("")
-    print("----Start of Output ---------------------------")
-    goodbye_world()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-  elif option==("3"):
-    print("")
-    print("----Start of Output ---------------------------")
-    goodbye_person()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-  elif option==("4"):
-    print("")
-    print("----Start of Output ---------------------------")
-    goodbye_teacher()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-  elif option==("5"):
-    print("")
-    print("----Start of Output ---------------------------")
-    forLoop()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-  elif option==("6"):
-    print("")
-    print("----Start of Output ---------------------------")
-    whileLoop()
-    print("")
-    print("----End of Output -----------------------------")
-    break
-    
- else:
-    print("")
-    print("----Start of Output ---------------------------")
-    print("")
-    print("invalid option")
-    print("")
-    print("----End of Output -----------------------------")
-
-
-
-print("1. Hello World")
-print("2. Goodbye World")
-print("3. Goodbye Person")
-print("4. Good Teacher")
-print("5. forLoop")
-print("6. whileLoop")
-print("7. string Loop")
-print("8. Convert to ascii")
-print("9. Encode a string")
-print("x. To Exit")
-option=input("Enter an option ")
-menu()
-
-enter=input("Press enter to continue ")
-if enter == "":
-    clear()
-else:
-    menu()
+        print("invalid option")
+    print("\n----End of Output -----------------------------\n\n\n")
+    if selection == "x":
+        input("Press Enter to continue ")
+    else:
+        input("Press Enter to continue ")
+        return Menu()
+Menu()
