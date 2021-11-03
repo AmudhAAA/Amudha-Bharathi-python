@@ -18,12 +18,17 @@ def For_Loop():
     for num in range(1,500):
         print(num)
 def While_Loop():
-    subject = input("What is the name of this subject ")
-    while subject != "IST":
-        print ("Not Correct - try again")
-        subject = input("What is the name of this subject ")
-        if subject == "IST": 
-            print("\n\n Congratulations!!\n\n")
+    while True:
+      subject = input("What is the name of this subject ")
+      if subject == "IST":
+        print("")
+        print("")
+        print(" Congratulations!!")
+        print("")
+        print("")
+        break
+    else:
+        print("Not Correct - try again")
 def Menu():
     import os
     os.system('cls')
