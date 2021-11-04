@@ -1,0 +1,10 @@
+print(" ------------------------------------------------")
+print("|                                                |")
+print("|    09ConvertToASCII                            |")
+print("|    Name : Amudha Bharathi                      |")
+print("|    Version : 01                                |")
+print("|                                                |")
+print(" ------------------------------------------------")
+str = input("What is your string? ")
+for element in str:
+    print(element, "=", ord(element))

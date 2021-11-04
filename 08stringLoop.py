@@ -1,0 +1,10 @@
+print(" ------------------------------------------------")
+print("|                                                |")
+print("|    08StringLoop                                |")
+print("|    Name : Amudha Bharathi                      |")
+print("|    Version : 01                                |")
+print("|                                                |")
+print(" ------------------------------------------------")
+str = input("What is your string? ")
+for element in str:
+    print(element)
